@@ -1,5 +1,6 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class ImagePanel extends JPanel {
 
     public ImagePanel() {
         setBounds(20,40,panelSize,panelSize);
-        label = new JLabel("Здесь будет ваш хуй");
+        label = new JLabel("Здесь будет ваше изображение");
 
         add(label);
         setVisible(true);
@@ -38,6 +39,7 @@ public class ImagePanel extends JPanel {
         System.out.println("h-" + height + "/// w-" + width);
 
         Graphics g = getGraphics();
-        g.drawImage(image,0,0, (int)width, (int)height,null);
+        g.clearRect(0,0,panelSize,panelSize);
+        g.drawImage(image, (int) ((panelSize-width)/2),(int) ((panelSize-height)/2), (int)width, (int)height,null);
     }
 }

@@ -21,7 +21,7 @@ public class MainPage extends JFrame {
         container.add(loadImageButton);
         container.add(imagePanel);
 
-        setSize(655, 400);
+        setSize(655, 700);
         setLayout(null);
         setVisible(true);
     }
